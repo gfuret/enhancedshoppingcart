@@ -1,6 +1,7 @@
 <?php
 	require_once("../inc/config.php");
 	require_once(ROOT_PATH . 'inc/products.php');
+	$products = get_products_all();
 	if(isset($_GET['id'])){
 	// 	GETTING DATA FOR TSHIRT
 		$product_id = $_GET["id"];

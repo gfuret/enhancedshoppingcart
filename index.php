@@ -1,5 +1,7 @@
 <?php 
 require_once("inc/config.php");
+include(ROOT_PATH . 'inc/products.php'); 
+$recent = get_products_recent();
 
 $pageTitle = "Shirts4Mike Store, Unique T-shirts designed by a frog";
 $section = 'Home';
@@ -20,21 +22,13 @@ include_once( ROOT_PATH . 'inc/header.php');
 		</div>
 
 	</div>
-
 	<div class="section shirts latest">
-
 		<div class="wrapper">
-
 			<h2>Mike&rsquo;s Latest Shirts</h2>
-			<?php include(ROOT_PATH . 'inc/products.php'); 
-			$totalProducts = count($products);	
-			$position = 0;	?>
 			<ul class="products">
-				<?php foreach ($products as $product_id => $product) { 
-						$position++;
-						if($position <= $totalProducts-4){ continue;}
-						echo get_list_view_html($product_id, $product);
-				}	?> 						
+				<?php foreach ($recent as $product) { 
+						echo get_list_view_html($product);
+				} ?> 		
 			</ul>
 
 		</div>

@@ -16,6 +16,7 @@
 			<ul class="nav">
 				<li class="shirts <?php if($section == 'shirts'){ echo "on";}?>"><a href="<?php  echo BASE_URL; ?>shirts/">Shirts</a></li>
 				<li class="contact <?php if($section == 'contact'){ echo "on";}?>"><a href="<?php  echo BASE_URL; ?>contact/">Contact</a></li>
+				<li class="search <?php if($section == 'search'){ echo "on";}?>"><a href="<?php  echo BASE_URL; ?>search/">Search</a></li>
 				<li class="cart"><a target="paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&amp;business=NL6JSU4QGK39U&amp;display=1">Shopping Cart</a></li>
 			</ul>
 
